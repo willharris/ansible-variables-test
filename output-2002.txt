@@ -2,7 +2,7 @@
 PLAY ***************************************************************************
 
 TASK [debug] *******************************************************************
-ok: [parent_grp-group-vars-value.test.com] => {
+ok: [inventory-child_grp-value.test.com] => {
     "test_var": "parent_grp-group-vars-value"
 }
 ok: [all-group-vars-value.test.com] => {
@@ -21,7 +21,7 @@ ok: [other_grp-group-vars-value.test.com] => {
 PLAY RECAP *********************************************************************
 all-group-vars-value.test.com : ok=1    changed=0    unreachable=0    failed=0   
 host-value.test.com        : ok=1    changed=0    unreachable=0    failed=0   
+inventory-child_grp-value.test.com : ok=1    changed=0    unreachable=0    failed=0   
 inventory-group-value.test.com : ok=1    changed=0    unreachable=0    failed=0   
 other_grp-group-vars-value.test.com : ok=1    changed=0    unreachable=0    failed=0   
-parent_grp-group-vars-value.test.com : ok=1    changed=0    unreachable=0    failed=0   
 
