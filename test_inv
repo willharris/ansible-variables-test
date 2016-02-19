@@ -1,22 +1,6 @@
-[test_grp]
-host-value.test.com test_var='host-value'
-inventory-group-value.test.com
+[simple_grp]
+inventory-simple_grp-value.test.com
 
-[other_grp]
-other_grp-group-vars-value.test.com
-
-[some_grp]
-all-group-vars-value.test.com
-
-[child_grp]
-inventory-child_grp-value.test.com
-
-[parent_grp:children]
-child_grp
-
-[test_grp:vars]
-test_var='inventory-group-value'
-
-[child_grp:vars]
-test_var='inventory-child_grp-value'
+[simple_grp:vars]
+test_var='inventory-simple_grp-value'
 
