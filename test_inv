@@ -1,0 +1,22 @@
+[test_grp]
+host-value.test.com test_var='host-value'
+inventory-group-value.test.com
+
+[other_grp]
+other_grp-group-vars-value.test.com
+
+[some_grp]
+all-group-vars-value.test.com
+
+[child_grp]
+parent_grp-group-vars-value.test.com
+
+[parent_grp:children]
+child_grp
+
+[test_grp:vars]
+test_var='inventory-group-value'
+
+[parent_grp:vars]
+test_var='inventory-parent-group-value'
+

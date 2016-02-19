@@ -1,0 +1,37 @@
+
+PLAY [all] ******************************************************************** 
+
+TASK: [debug var=test_var] **************************************************** 
+ok: [parent_grp-group-vars-value.test.com] => {
+    "var": {
+        "test_var": "parent_grp-group-vars-value"
+    }
+}
+ok: [all-group-vars-value.test.com] => {
+    "var": {
+        "test_var": "all-group-vars-value"
+    }
+}
+ok: [host-value.test.com] => {
+    "var": {
+        "test_var": "host-value"
+    }
+}
+ok: [inventory-group-value.test.com] => {
+    "var": {
+        "test_var": "test_grp-group-vars-value"
+    }
+}
+ok: [other_grp-group-vars-value.test.com] => {
+    "var": {
+        "test_var": "other_grp-group-vars-value"
+    }
+}
+
+PLAY RECAP ******************************************************************** 
+all-group-vars-value.test.com : ok=1    changed=0    unreachable=0    failed=0   
+host-value.test.com        : ok=1    changed=0    unreachable=0    failed=0   
+inventory-group-value.test.com : ok=1    changed=0    unreachable=0    failed=0   
+other_grp-group-vars-value.test.com : ok=1    changed=0    unreachable=0    failed=0   
+parent_grp-group-vars-value.test.com : ok=1    changed=0    unreachable=0    failed=0   
+
